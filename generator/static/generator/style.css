@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat';
+    background-color: #121518;
+    color: white;
+}
+
+h1 {
+    font-family: 'Special Elite';
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.font-50 {
+    font-size: 44px !important;
+}
+
+.size-1 {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+}
+
+.btn:hover {
+    background-color: black;
+    color: yellow;
+}
