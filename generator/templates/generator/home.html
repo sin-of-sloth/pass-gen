@@ -1,56 +1,64 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="{% static 'generator/style.css' %}">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pass-Gen</title>
-</head>
-<body>
-	<nav class="navbar navbar-dark bg-dark mb-5">
-        <span class="navbar-brand mx-auto" href="#"><h1>PASSWORD GENERATOR</h1></span>
-    </nav>
-	<div class="container text-center">
+{% extends 'generator/base.html' %}
 
-		<form action="{% url 'password' %}" class="form-control-lg">
-			<select name="length" class="mb-5 size-1">
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-				<option value="13" selected="selected">13</option>
-				<option value="14">14</option>
-				<option value="15">15</option>
-			</select> <span class="font-50">&emsp;Length</span>
-			<div class="custom-control mb-5 custom-switch size-1">
-				<input class="custom-control-input" type="checkbox" name="uppercase" id="uppercase" checked>
-				<label class="custom-control-label" for="uppercase">
-					Uppercase
-				</label>
+{% block logo-url %}#!{% endblock %}
+
+{% block content %}
+<br><br>
+<div class="container center">
+	<div class="card-panel z-depth-5">
+		<div class="row">
+			<div class="col s12">
+				<h1>Password Parameters</h1>
 			</div>
-			<div class="custom-control mb-5 custom-switch size-1">
-				<input class="custom-control-input" type="checkbox" name="numbers" id="numbers" checked>
-				<label class="custom-control-label" for="numbers">
-					Numbers
-				</label>
-			</div>
-			<div class="custom-control mb-5 custom-switch size-1">
-				<input class="custom-control-input" type="checkbox" name="special" id="special" checked>
-				<label class="custom-control-label" for="special">
-					Special
-				</label>
-			</div>
-			<br>
-			<button type="submit" class="btn btn-warning btn-lg size-1">
-				Generate Password <i class="fa fa-key"></i>
-			</button>
-		</form>
+			<form class="col s12" action="{% url 'password' %}">
+				<div class="row">
+					<div class="input-field col s4 offset-s4 center">
+						<select name="length" id="length">
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13" selected="selected">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+						</select>
+						<label>Length</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s4 center">
+						<label>
+							<input type="checkbox" name="numbers" id="numbers" checked />
+							<span>Numbers</span>
+						</label>
+					</div>
+					<div class="input-field col s4 center">
+						<label>
+							<input type="checkbox" name="uppercase" id="uppercase" checked />
+							<span>Uppercase Alphabets</span>
+						</label>
+					</div>
+					<div class="input-field col s4 center">
+						<label>
+							<input type="checkbox" name="special" id="special" checked />
+							<span>Special Characters</span>
+						</label>
+					</div>
+				</div>
+				<br><hr><br>
+				<div class="row">
+					<div class="col s12">
+						<button type="submit" class="btn btn-large z-depth-4">
+							Generate Password <i class="fa fa-key right"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
 	</div>
-</body>
-</html>
+</div>
+
+{% endblock %}

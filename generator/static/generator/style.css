@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Montserrat';
-    background-color: #121518;
+    background-color: #121212;
     color: white;
 }
 
@@ -14,16 +14,85 @@ h2 {
     font-size: 50px;
 }
 
-.font-50 {
-    font-size: 44px !important;
+.brand-logo {
+    font-family: 'Special Elite' !important;
 }
 
-.size-1 {
-    transform: scale(2);
-    -webkit-transform: scale(2);
+.nav-wrapper {
+    background-color: #1e1e1e !important;
+}
+
+.input-field > label {
+    color: #ffffff !important;
+}
+
+[type="checkbox"]:checked + span:not(.lever)::before {
+    border: 0 !important;
+    border-right: 4px solid #ffff00 !important;
+    border-bottom: 4px solid #ffff00 !important;
+}
+
+[type="checkbox"] + span:not(.lever)::before {
+    border: 3px solid #ffff00 !important;
+}
+
+.card-panel {
+    background-color: #1e1e1e !important;
+}
+
+.btn {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border: #ffff00 2px solid !important;
 }
 
 .btn:hover {
-    background-color: black;
-    color: yellow;
+    background-color: #1e1e1e !important;
+    color: #ffff00 !important;
+    border: #ffff00 2px solid !important;
+    -webkit-transition: background-color .1s linear;
+    -ms-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+}
+
+.select-wrapper input.select-dropdown {
+    border-bottom: #ffff00 2px solid !important;
+}
+
+.dropdown-trigger {
+    color: #ffffff !important;
+}
+
+.dropdown-content {
+    background-color: #1e1e1e !important;
+}
+
+.dropdown-content li > span {
+    color: #ffffff !important;
+}
+
+.selected {
+    background-color: #131313 !important;
+}
+
+.password-col {
+    border-radius: 30px !important;
+    background-color: #2d2d2d !important;
+    color: #76ff03 !important;
+}
+
+.copy {
+    color: #8f8f8f !important;
+    cursor: pointer !important;
+    font-size: xx-large !important;
+    margin-top: auto !important;
+}
+
+.toast {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
+
+hr {
+    border-color: #808080!important;
 }

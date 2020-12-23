@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="{% static 'generator/materialize.min.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'generator/style.css' %}">
+    
+    <link rel="icon" href="{% static 'generator/favicon.ico' %}"
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pass-Gen</title>
+</head>
+<body>
+	<nav>
+        <div class="nav-wrapper z-depth-4">
+            <a href="{% block logo-url %}{% endblock %}" class="brand-logo center">Pass-Gen</a>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+    
+    <script src="{% static 'generator/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'generator/materialize.min.js' %}"></script>
+    <script src="{% static 'generator/script.js' %}"></script>
+ 
+</body>
+</html>
