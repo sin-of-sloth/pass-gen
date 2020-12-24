@@ -5,43 +5,37 @@
 {% block content %}
 <br><br>
 <div class="container center">
-	<div class="card-panel z-depth-5">
+	<div class="card-panel info-card z-depth-5">
 		<div class="row">
 			<div class="col s12">
 				<h1>Password Parameters</h1>
 			</div>
 			<form class="col s12" action="{% url 'password' %}">
 				<div class="row">
-					<div class="input-field col s4 offset-s4 center">
-						<select name="length" id="length">
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-							<option value="13" selected="selected">13</option>
-							<option value="14">14</option>
-							<option value="15">15</option>
-						</select>
-						<label>Length</label>
+					<div class="input-field col s4 offset-s3">
+						<p class="range-field">
+							<input type="range" class="lengthslider" name="passwordlength" id="passwordlength" min="8" max="23" onchange="showVal(this.value)" value="13" />
+						</p>
+					</div>
+					<div class="col s1 offset-s1 card-panel length-card z-depth-5">
+						<h5 id="length"></h5>
+						<label for="length">Length</label>
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-field col s4 center">
+					<div class="input-field col s2 offset-s1 center">
 						<label>
 							<input type="checkbox" name="numbers" id="numbers" checked />
 							<span>Numbers</span>
 						</label>
 					</div>
-					<div class="input-field col s4 center">
+					<div class="input-field col s3 offset-s2 center">
 						<label>
 							<input type="checkbox" name="uppercase" id="uppercase" checked />
 							<span>Uppercase Alphabets</span>
 						</label>
 					</div>
-					<div class="input-field col s4 center">
+					<div class="input-field col s2 offset-s1 center">
 						<label>
 							<input type="checkbox" name="special" id="special" checked />
 							<span>Special Characters</span>

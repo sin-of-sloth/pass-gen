@@ -18,14 +18,17 @@ def password(request) :
 	if(request.GET.get('numbers')) :
 		characters.extend(list('1234567890'))
 
-	length = int(request.GET.get('length', 12))
+	passwordlength = int(request.GET.get('passwordlength', 13))
 
 	thepassword = ''
     
-	for _ in range (length) :
+	for _ in range (passwordlength) :
 		thepassword += random.choice(characters)
-
-	return render(request, 'generator/password.html', {'password': thepassword})
+	
+	if(request.GET.get('refresh')) :
+		return HttpResponse(thepassword)
+	else :
+		return render(request, 'generator/password.html', {'password': thepassword})
 
 def about(request) :
 	return render(request, 'generator/about.html')

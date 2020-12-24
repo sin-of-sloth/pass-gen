@@ -36,8 +36,24 @@ h2 {
     border: 3px solid #ffff00 !important;
 }
 
-.card-panel {
+input[type="range"] {
+    border: 0px !important;
+}
+
+input[type="range"]:-moz-focusring {
+    outline: 0px !important;
+}
+
+input[type="range"] + .thumb {
+    background-color: #121212 !important;
+}
+
+.info-card {
     background-color: #1e1e1e !important;
+}
+
+.length-card {
+    background-color: #ffff00 !important;
 }
 
 .btn {
@@ -85,7 +101,9 @@ h2 {
     color: #8f8f8f !important;
     cursor: pointer !important;
     font-size: xx-large !important;
-    margin-top: auto !important;
+    float: right !important;
+    padding-right: 20px;
+    vertical-align: middle !important;
 }
 
 .toast {
@@ -95,4 +113,13 @@ h2 {
 
 hr {
     border-color: #808080!important;
+}
+
+label {
+    color: #808080 !important;
+}
+
+#length {
+    color: #1e1e1e !important;
+    font-weight: bolder !important;
 }

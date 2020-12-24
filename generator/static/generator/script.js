@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, {dropdownOptions: {coverTrigger: false}});
+    showVal(document.getElementById('passwordlength').value);
 });
 
 function copyToClipboard(element) {
@@ -10,4 +11,8 @@ function copyToClipboard(element) {
     document.execCommand("copy");
     $temp.remove();
     M.toast({html: 'Password copied to clipboard!'})
+}
+
+function showVal(value) {
+    $('#length').text(value);
 }
