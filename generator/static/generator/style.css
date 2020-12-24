@@ -123,3 +123,15 @@ label {
     color: #1e1e1e !important;
     font-weight: bolder !important;
 }
+
+.rotate{
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.rotate.down{
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+}

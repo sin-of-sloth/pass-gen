@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     showVal(document.getElementById('passwordlength').value);
 });
 
+$(document).ready(function(){
+    $('.tooltipped').tooltip({
+        'margin' : -2,
+        'position' : 'right',
+    });
+});
+
 function copyToClipboard(element) {
     var $temp = $("<input>");
     $("body").append($temp);
@@ -16,3 +23,13 @@ function copyToClipboard(element) {
 function showVal(value) {
     $('#length').text(value);
 }
+
+var rot = 180;
+
+$(".rotate").click(function(){
+    $(this).find('.fa-refresh').css({
+        'transition' : 'all .3s linear',
+        'transform' : 'rotate(' + rot + 'deg)',
+    });
+    rot += 180;
+})
